@@ -1,9 +1,12 @@
 # config valid only for current version of Capistrano
 lock "3.9.0"
 
+set :file_permissions_roles, :all
 set :file_permissions_paths, ["craft/config"]
 set :file_permissions_users, ["root"]
+set :file_permissions_groups, ["root"]
 set :file_permissions_chmod_mode, "0744"
+
 set :application, "craft-capistrano-digitalocean"
 set :repo_url, "https://github.com/digikokki/craft-capistrano-digitalocean.git"
 
