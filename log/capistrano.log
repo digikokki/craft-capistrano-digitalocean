@@ -1106,3 +1106,72 @@ and the repository exists.
   INFO [cd6db674] Running /usr/bin/env echo "Branch master (at 69f09af94e71c8634e3811717432c95bcc56c188) deployed as release 20170826194116 by digikokki" >> /var/www/craft/revisions.log as root@146.185.169.225
  DEBUG [cd6db674] Command: cd /var/www/craft/releases && /usr/bin/env echo "Branch master (at 69f09af94e71c8634e3811717432c95bcc56c188) deployed as release 20170826194116 by digikokki" >> /var/www/craft/revisions.log
   INFO [cd6db674] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-26 22:42:36 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [3ca3cf42] Running /usr/bin/env mkdir -p /tmp as root@146.185.169.225
+ DEBUG [3ca3cf42] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3ca3cf42] Finished in 4.359 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-craft-capistrano-digitalocean-production-digikokki.sh 0.0%
+  INFO Uploading /tmp/git-ssh-craft-capistrano-digitalocean-production-digikokki.sh 100.0%
+  INFO [6c56b90b] Running /usr/bin/env chmod 700 /tmp/git-ssh-craft-capistrano-digitalocean-production-digikokki.sh as root@146.185.169.225
+ DEBUG [6c56b90b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-craft-capistrano-digitalocean-production-digikokki.sh
+  INFO [6c56b90b] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO [0ebf9c4d] Running /usr/bin/env git ls-remote https://github.com/digikokki/craft-capistrano-digitalocean.git HEAD as root@146.185.169.225
+ DEBUG [0ebf9c4d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-craft-capistrano-digitalocean-production-digikokki.sh" ; /usr/bin/env git ls-remote https://github.com/digikokki/craft-capistrano-digitalocean.git HEAD )
+ DEBUG [0ebf9c4d] 	989f38bf2f32c40aa72c4f6722bc28961be0e2ea	HEAD
+  INFO [0ebf9c4d] Finished in 1.055 seconds with exit status 0 (successful).
+  INFO [6468f800] Running /usr/bin/env mkdir -p /var/www/craft/shared /var/www/craft/releases as root@146.185.169.225
+ DEBUG [6468f800] Command: /usr/bin/env mkdir -p /var/www/craft/shared /var/www/craft/releases
+  INFO [6468f800] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [e182f5f5] Running [ -f /var/www/craft/current/REVISION ] as root@146.185.169.225
+ DEBUG [e182f5f5] Command: [ -f /var/www/craft/current/REVISION ]
+ DEBUG [e182f5f5] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [4c91462d] Running /usr/bin/env cat /var/www/craft/current/REVISION 2>/dev/null as root@146.185.169.225
+ DEBUG [4c91462d] Command: /usr/bin/env cat /var/www/craft/current/REVISION 2>/dev/null
+ DEBUG [4c91462d] 	69f09af94e71c8634e3811717432c95bcc56c188
+ DEBUG [4c91462d] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [84c90465] Running [ -f /var/www/craft/repo/HEAD ] as root@146.185.169.225
+ DEBUG [84c90465] Command: [ -f /var/www/craft/repo/HEAD ]
+ DEBUG [84c90465] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/craft/repo
+ DEBUG [8790885b] Running if test ! -d /var/www/craft/repo; then echo "Directory does not exist '/var/www/craft/repo'" 1>&2; false; fi as root@146.185.169.225
+ DEBUG [8790885b] Command: if test ! -d /var/www/craft/repo; then echo "Directory does not exist '/var/www/craft/repo'" 1>&2; false; fi
+ DEBUG [8790885b] Finished in 0.070 seconds with exit status 0 (successful).
+  INFO [d078d00f] Running /usr/bin/env git remote set-url origin https://github.com/digikokki/craft-capistrano-digitalocean.git as root@146.185.169.225
+ DEBUG [d078d00f] Command: cd /var/www/craft/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-craft-capistrano-digitalocean-production-digikokki.sh" ; /usr/bin/env git remote set-url origin https://github.com/digikokki/craft-capistrano-digitalocean.git )
+  INFO [d078d00f] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [400a616d] Running /usr/bin/env git remote update --prune as root@146.185.169.225
+ DEBUG [400a616d] Command: cd /var/www/craft/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-craft-capistrano-digitalocean-production-digikokki.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [400a616d] 	Fetching origin
+ DEBUG [400a616d] 	From https://github.com/digikokki/craft-capistrano-digitalocean
+ DEBUG [400a616d] 	   69f09af..989f38b  master     -> master
+  INFO [400a616d] Finished in 1.193 seconds with exit status 0 (successful).
+ DEBUG [b659e07d] Running if test ! -d /var/www/craft/repo; then echo "Directory does not exist '/var/www/craft/repo'" 1>&2; false; fi as root@146.185.169.225
+ DEBUG [b659e07d] Command: if test ! -d /var/www/craft/repo; then echo "Directory does not exist '/var/www/craft/repo'" 1>&2; false; fi
+ DEBUG [b659e07d] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [0174af94] Running /usr/bin/env mkdir -p /var/www/craft/releases/20170826194242 as root@146.185.169.225
+ DEBUG [0174af94] Command: cd /var/www/craft/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-craft-capistrano-digitalocean-production-digikokki.sh" ; /usr/bin/env mkdir -p /var/www/craft/releases/20170826194242 )
+  INFO [0174af94] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [eb11ea03] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/craft/releases/20170826194242 as root@146.185.169.225
+ DEBUG [eb11ea03] Command: cd /var/www/craft/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-craft-capistrano-digitalocean-production-digikokki.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/craft/releases/20170826194242 )
+  INFO [eb11ea03] Finished in 1.094 seconds with exit status 0 (successful).
+ DEBUG [a0c339f6] Running if test ! -d /var/www/craft/repo; then echo "Directory does not exist '/var/www/craft/repo'" 1>&2; false; fi as root@146.185.169.225
+ DEBUG [a0c339f6] Command: if test ! -d /var/www/craft/repo; then echo "Directory does not exist '/var/www/craft/repo'" 1>&2; false; fi
+ DEBUG [a0c339f6] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [126200ac] Running /usr/bin/env git rev-list --max-count=1 master as root@146.185.169.225
+ DEBUG [126200ac] Command: cd /var/www/craft/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-craft-capistrano-digitalocean-production-digikokki.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [126200ac] 	989f38bf2f32c40aa72c4f6722bc28961be0e2ea
+ DEBUG [126200ac] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [bd6a583a] Running if test ! -d /var/www/craft/releases/20170826194242; then echo "Directory does not exist '/var/www/craft/releases/20170826194242'" 1>&2; false; fi as root@146.185.169.225
+ DEBUG [bd6a583a] Command: if test ! -d /var/www/craft/releases/20170826194242; then echo "Directory does not exist '/var/www/craft/releases/20170826194242'" 1>&2; false; fi
+ DEBUG [bd6a583a] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [d5712e5c] Running /usr/bin/env echo "989f38bf2f32c40aa72c4f6722bc28961be0e2ea" >> REVISION as root@146.185.169.225
+ DEBUG [d5712e5c] Command: cd /var/www/craft/releases/20170826194242 && /usr/bin/env echo "989f38bf2f32c40aa72c4f6722bc28961be0e2ea" >> REVISION
+  INFO [d5712e5c] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [1af864b2] Running [ -d /var/www/craft/releases/20170826194242/craft/config ] as root@146.185.169.225
+ DEBUG [1af864b2] Command: [ -d /var/www/craft/releases/20170826194242/craft/config ]
+ DEBUG [1af864b2] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [5f1967bb] Running /usr/bin/env setfacl -Rn -m u:root:rwX -m u:staff:rwX -m u:root:rwX /var/www/craft/releases/20170826194242/craft/config as root@146.185.169.225
+ DEBUG [5f1967bb] Command: /usr/bin/env setfacl -Rn -m u:root:rwX -m u:staff:rwX -m u:root:rwX /var/www/craft/releases/20170826194242/craft/config
+ DEBUG [5f1967bb] 	setfacl: Option -m: Invalid argument near character 3
