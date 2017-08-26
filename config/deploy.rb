@@ -2,7 +2,7 @@
 lock "3.9.0"
 
 set :file_permissions_roles, :all
-set :file_permissions_paths, ["craft/config"]
+set :file_permissions_paths, ["craft/config", "craft/storage"]
 set :file_permissions_users, ["www-data"]
 set :file_permissions_groups, ["www-data"]
 set :file_permissions_chmod_mode, "0744"
