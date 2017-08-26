@@ -9,6 +9,7 @@
 
 server '146.185.169.225', user: 'root', roles: %w{web app}
 
+before "deploy:updated", "deploy:set_permissions:acl"
 
 # role-based syntax
 # ==================
