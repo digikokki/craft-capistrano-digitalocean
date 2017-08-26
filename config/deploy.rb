@@ -1,14 +1,14 @@
 # config valid only for current version of Capistrano
 lock "3.9.0"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, "craft-capistrano-digitalocean"
+set :repo_url, "https://github.com/digikokki/craft-capistrano-digitalocean.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+set :deploy_to, "/var/www/craft"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -33,4 +33,4 @@ set :repo_url, "git@example.com:me/my_repo.git"
 # set :local_user, -> { `git config user.name`.chomp }
 
 # Default value for keep_releases is 5
-# set :keep_releases, 5
+set :keep_releases, 2
