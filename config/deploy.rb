@@ -2,6 +2,7 @@
 lock "3.9.0"
 
 set :file_permissions_paths, ["craft/config"]
+set :file_permissions_users, ["root"]
 set :file_permissions_chmod_mode, "0774"
 set :application, "craft-capistrano-digitalocean"
 set :repo_url, "https://github.com/digikokki/craft-capistrano-digitalocean.git"
